@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars Club UY</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+
+<body>
+
+<nav>
+    <input type="checkbox" id="toggle">
+
+    <div class="logo">
+        the best diferents cars and meets in Uruguay
+    </div>
+
+    <ul class="list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Japanese</a></li>
+        <li><a href="#">American</a></li>
+        <li><a href="#">Italian</a></li>
+        <li><a href="#">German</a></li>
+    </ul>
+
+    <label for="toggle" class="icon-bars">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </label>
+
+<div class="search-container">
+    <div class="search">
+        <span class="material-symbols-outlined">search</span>
+        <input
+            type="text"
+            id="buscador"
+            class="search-input"
+            placeholder="Search..."
+            onkeyup="search()"
+        >
+    </div>
+
+    <ul id="lista" class="resultados">
+        <li><a href="blog1.html">bananas</a></li>
+        <li>manzanas</li>
+        <li>peras</li>
+</ul>
+</div>
+
+<p class="parrafo">
+    Nosotros vendemos luces, muebles, decoraciones
+    y más, mediante recolecciones de materiales reciclables.
+</p>
+
+<p class="parrafo1">
+    Las recolecciones pueden ser mediante donaciones o productos reciclados
+    desechados que encontremos. Por ejemplo metal, vidrio y más.
+</p>
+
+<script>
+function search() {
+    let input = document.getElementById("buscador").value.toLowerCase();
+    let items = document.querySelectorAll("#lista li");
+
+    items.forEach(item => {
+        let texto = item.textContent.toLowerCase();
+        item.style.display = texto.includes(input) ? "block" : "none";
+    });
+}
+function search() {
+    let input = document.getElementById("buscador").value.toLowerCase();
+    let items = document.querySelectorAll("#lista li");
+    let lista = document.getElementById("lista");
+
+    let visible = false;
+
+    items.forEach(item => {
+        let texto = item.textContent.toLowerCase();
+        if (texto.includes(input) && input !== "") {
+            item.style.display = "block";
+            visible = true;
+        } else {
+            item.style.display = "none";
+        }
+    });
+
+    lista.style.display = visible ? "block" : "none";
+}
+
+</script>
+
+</body>
+</html>

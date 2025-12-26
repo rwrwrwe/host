@@ -1,0 +1,139 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Asegura que el fondo sea blanco */
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #fdfdfd;
+}
+
+/* ===== NAV ===== */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 25px;
+    background-color: #ffffff; /* BLANCO */
+    border-bottom: 1px solid #ddd;
+}
+
+/* ===== LOGO ===== */
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #f3f0f0;
+}
+
+/* ===== MENU ===== */
+.list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.list li a {
+    text-decoration: none;
+    color: #ffffffcc;
+    transition: color 0.3s ease;
+}
+
+.list li a:hover {
+    color: #fcf4f4;
+}
+
+/* ===== ICONO HAMBURGUESA ===== */
+.icon-bars {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.icon-bars .line {
+    width: 25px;
+    height: 3px;
+    background-color: #fffdfd;
+    margin: 4px 0;
+    border-radius: 2px;
+}
+
+/* ===== CHECKBOX OCULTO ===== */
+#toggle {
+    display: none;
+}
+
+/* ===== BUSCADOR ===== */
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 25px;
+    background-color: #ffffff; /* BLANCO */
+    border: 1px solid #ccc;
+}
+
+.search span {
+    color: #fafafa;
+}
+
+.search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Lexend', sans-serif;
+}
+
+.search-input::placeholder {
+    color: #777777;
+}
+
+/* ===== PÁRRAFOS ===== */
+.parrafo,
+.parrafo1 {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px;
+    font-size: 1.1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgb(30, 255, 0);
+}
+
+/* CONTENEDOR DEL BUSCADOR */
+.search-container {
+    position: sticky;
+}
+
+/* RESULTADOS DE BÚSQUEDA */
+.resultados {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    list-style: none;
+    margin-top: 5px;
+    padding: 5px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    display: none;
+    z-index: 999;
+}
+
+.resultados li {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.resultados li:hover {
+    background-color: #f2f2f2;
+}
